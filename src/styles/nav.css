@@ -1,0 +1,33 @@
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.625rem 1.937rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .25);
+}
+
+.nav section {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (width < 50em) {
+    .nav {
+        padding: .3rem 1rem;
+    }
+}
+
+@media (width < 50em) {
+    .nav img[src*="icons/logo"] {
+        width: 3rem;
+    }
+
+    .nav img[src*="icons/profile"]{
+        width: 2.5rem;
+    }
+}
+
+img[src*="icons/Menu.svg"] {
+    cursor: pointer;
+}

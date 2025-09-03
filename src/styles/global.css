@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    background-color: var(--bg-color-dark);
+    height: 100vh;
+}
+
+@media (height <= 650px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+}
+
+:root {
+    --ff: "Noto Sans HK", sans-serif;
+
+    --title-large: 700 2.5rem/1 var(--ff); /* 40px */
+    --title-ls: 700 2rem/1 var(--ff);;
+    --title-sl: 700 1.875rem/1 var(--ff); /* 30px*/
+    --title-ssl: 700 1.5rem/1 var(--ff); /* */
+    --title-sssl: 700 1.3rem/1 var(--ff);
+
+    --tx-lg: 600 1.625rem/1 var(--ff); /* 26px*/
+    --tx-md: 600 1.25rem/1 var(--ff); /* 20px*/
+    --tx-sm: 600 1rem/1 var(--ff); /* 16px */
+    --tx-ss: 600 .875rem/1 var(--ff); /*  */
+
+    --bnt-cancel-sm: 500 .875rem/1 var(--ff); /* 8px */
+    --bnt-cancel-md: 500 1.2rem/1 var(--ff); /* 19,2 */
+    --bnt-cancel-m: 500 1rem/1 var(--ff);
+    --bnt-cancel-m-atention: 600 1rem/1 var(--ff);
+    --bnt-cancel-sm-atention-hover: 700 1rem/1 var(--ff);
+
+    /* Colors */
+    --cl-white: #fff;
+    --cl-black: #000;
+    --cl-desc: #8F8D8D;
+    --cl-darkgreen: #367623;
+    --cl-lightgreen: #BFEAB2;
+    --cl-lightblue: #464EE5;
+    --cl-purple: #7203E1;
+    --bg-color-dark: #F9F6FC;
+    --cl-border-form: #D9D9D9;
+    --bg-offers: #F4F4F4;
+    --box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+    
+    --linear-bg-cl: linear-gradient(90deg, #464EE5, #7203E1);
+
+    /* Nav colors */
+    --cl-menu: #fff;
+
+    /* Attention cancel */
+    --bg-cl-danger: #FEE9E7;
+    --cl-border-danger: #ec221f77;
+    --cl-bnt-danger: #EC221F;
+    --cl-bnt-danger-hover: #ec221fce;
+    --cl-h-p-danger: #900B09;
+    --cl-bnt-disabled:#ec221f6b;
+
+    --bg-cl-aprove: #F9FEE7;
+    --border-aprove: #055814;
+    --cl-bnt-aprove-hover:rgba(107, 199, 20, 0.705);
+    --cl-bnt-aprove: #6BC714;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    appearance: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.blue {
+    color: var(--cl-lightblue);
+}
+
+.flex {
+    display: flex;
+}
+
+.blur {
+    filter: blur(3.5px);
+}
+
+.atention {
+    font: var(--bnt-cancel-m-atention);
+}
+
+.atentionAprove {
+    font: var(--bnt-cancel-m-atention);
+}
+
+.dspNone {
+    display: none;
+}
+
+.manterAss {
+    background-image: var(--linear-bg-cl);
+    padding: .875rem 1.6rem;
+    color: var(--cl-white);
+    font: var(--bnt-cancel-md);
+    border-radius: .5rem;
+    transition: all 500ms ease;
+    cursor: pointer;
+}
+
+.manterAss:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 .6rem var(--cl-lightblue);
+}
+
+.continueBnt {
+    padding: .875rem;
+    font: var(--bnt-cancel-md);
+    border: 1px solid var(--cl-purple);
+    background: var(--bg-color-dark);
+    border-radius: .5rem;
+    color: var(--cl-purple);
+    cursor: pointer;
+    transition: all 300ms ease-in;
+}
+
+.continueBnt:hover {
+    transform: scale(1.05);
+    color: rgb(0, 0, 0, .3);
+    border: 1px solid transparent;
+}
+
+
+#modal-acolhimento {
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 50rem;
+    box-shadow: var(--box-shadow);
+}
+
+@media (width < 60em) {
+    #modal-acolhimento {
+        width: 40rem;
+    }
+}
+
+@keyframes ContentsOf {
+    to {
+        opacity: 0;
+        transform: translateX(+100%);
+        display: none;
+    }
+}
+
+.contentsOf {
+    animation: ContentsOf 200ms ease-in both;
+}
+
+@keyframes ContentsOn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.contentsOn {
+    animation: ContentsOn 200ms ease-out both;
+}
+
+.rotate {
+    transition: all 350ms ease;
+    transform: rotate(-360deg);
+}
+
+
+@media (width > 80em) {
+    .rotateOpen {
+        transition: all 350ms ease;
+        transform: rotate(0);
+    }
+    .content .contentsLeftOf {
+        width: 6rem;
+    }
+}
