@@ -1,7 +1,5 @@
 import { reception } from "./reception.js"
 
-const mainContent = document.querySelector("#mainContent")
-
 const nav = document.querySelector("#nav")
 const content = document.querySelector("#content")
 const btnCancel = document.querySelector("#cancel")

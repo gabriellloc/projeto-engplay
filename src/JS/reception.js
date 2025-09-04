@@ -1,3 +1,5 @@
+import { keepSubs } from "./bntKeepSub"
+
 const body = document.querySelector("body")
 let userName = "Isadora"
 
@@ -14,12 +16,15 @@ export function reception(){
     <h1 class="byeTitle">Sentiremos sua falta, <span class="capitalize">${userName}</span>!!</h1>
     <p class="byeText">Respeitamos totalmente sua decisão de encerar sua assinatura. Porém caso haja algo que possamos fazer para melhorar sua experiência, queremos ouvi-lo antes de nos despedirmos.</p>
     <div>
-        <button class="manterAss keepSub">Manter Assinatura</button>
-        <button class="continueBnt" id="bntFeedback">Continuar</button>
+      <button class="manterAss keepSub">Manter Assinatura</button>
+      <button class="continueBnt" id="bntFeedback">Continuar</button>
     </div>
   `
   
   receptionModal.append(receptionDiv)
   body.appendChild(receptionModal)
   receptionModal.showModal()
+  keepSubs()
+
+  const bntFeedback = document.querySelector("#bntFeedback")
 }
