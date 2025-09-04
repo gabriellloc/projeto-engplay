@@ -1,0 +1,84 @@
+.receptionModal {
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    width: 44rem;
+    border: none;
+    border-radius: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.receptionDiv {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.receptionDiv img[src*="icons/logo"] {
+    width: 3rem;
+    margin: auto;
+}
+
+@media (width < 80em) {
+    .receptionDiv img[src*="icons/logo"] {
+        display: none;
+    }
+}
+
+.receptionDiv img[src*="icons/coracao.svg"] {
+    width: 9rem;
+    margin: 1rem auto;
+}
+
+@media (width < 70em) {
+	.receptionDiv img[src*="icons/coracao.svg"] {
+        width: 6rem;
+    }
+}
+
+.receptionDiv .byeTitle {
+    font: var(--title-large);
+    text-align: center;
+    color: var(--cl-lightblue);
+    text-transform: uppercase;
+}
+
+@media (width < 80em) {
+	.receptionDiv .byeTitle {
+        font: var(--title-sl);
+    }
+}
+
+.receptionDiv .byeText {
+    text-align: center;
+    margin: auto;
+    color: var(--cl-black);
+    font: var(--tx-md);
+    width: 80%;
+}
+
+@media (width < 80em) {
+    .receptionDiv .byeText{
+        width: 80%;
+        font: var(--tx-sm);
+    }
+}
+
+.receptionDiv div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;  
+    margin: auto;
+    width: 100%;
+}
+
+@media (width < 80em) {
+    .receptionDiv div {
+        gap: 1.3rem;
+    }
+
+    .receptionDiv div .continueBnt{
+        width: fit-content;
+    }
+}
