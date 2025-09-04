@@ -1,4 +1,5 @@
 import { keepSubs } from "./bntKeepSub"
+import { feedback } from "./feedback"
 
 const body = document.querySelector("body")
 let userName = "Isadora"
@@ -24,7 +25,17 @@ export function reception(){
   receptionModal.append(receptionDiv)
   body.appendChild(receptionModal)
   receptionModal.showModal()
-  keepSubs()
 
-  const bntFeedback = document.querySelector("#bntFeedback")
+  receptionModal.addEventListener("close", ()=>{
+    nav.classList.remove("blur")
+    content.classList.remove("blur")
+  })
+  keepSubs()
+  const bntFeedback = document.querySelectorAll("#bntFeedback")
+  bntFeedback.forEach(bnt => {
+    bnt.addEventListener("click", () => {
+      feedback()
+      receptionModal.close()
+    })
+  })
 }
