@@ -23,7 +23,8 @@ export function feedback(){
       </div>
     </section>
   `
-
+  const localMain = document.createElement("div")
+  localMain.setAttribute("id", "localMain")
   const feedbackForm = document.createElement("form")
   feedbackForm.innerHTML = `
     <h1>Podemos ouvir você rapidinho ?</h1>
@@ -64,7 +65,8 @@ export function feedback(){
       <button class="continueBnt" type="submit">Continuar</button>
     </div>
   `
-  mainContent.append(progressBarHTML, feedbackForm)
+  localMain.append(progressBarHTML, feedbackForm)
+  mainContent.append(localMain)
 
   const inputValueText = document.querySelector("#Other")
   let textValue = ""

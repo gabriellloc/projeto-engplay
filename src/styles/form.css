@@ -83,12 +83,3 @@ form div:not(:last-child) input[type="text"]:focus {
 form div:not(:last-child) input[type="text"]:hover {
   outline: 5px solid var(--cl-border-form);
 }
-
-.divBnt {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
-  justify-content: space-between;
-  padding-inline: 1.4rem;
-}

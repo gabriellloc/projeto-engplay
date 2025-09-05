@@ -29,13 +29,14 @@ body {
     --title-sssl: 700 1.3rem/1 var(--ff);
 
     --tx-lg: 600 1.625rem/1 var(--ff); /* 26px*/
-    --tx-md: 600 1.25rem/1 var(--ff); /* 20px*/
+    --tx-md: 600 1.25rem/1.15 var(--ff); /* 20px*/
     --tx-sm: 600 1rem/1 var(--ff); /* 16px */
     --tx-ss: 600 .875rem/1 var(--ff); /*  */
 
     --bnt-cancel-sm: 500 .875rem/1 var(--ff); /* 8px */
     --bnt-cancel-md: 500 1.2rem/1 var(--ff); /* 19,2 */
     --bnt-cancel-m: 500 1rem/1 var(--ff);
+    --bnt-cancel-s: 500 .875rem/1 var(--ff);
     --bnt-cancel-m-atention: 600 1rem/1 var(--ff);
     --bnt-cancel-sm-atention-hover: 700 1rem/1 var(--ff);
 
@@ -144,6 +145,22 @@ ul {
     border: 1px solid transparent;
 }
 
+.divBnt {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.3rem;
+  justify-content: space-between;
+  padding-inline: 1.4rem;
+}
+
+.divBntBenefits{
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2.5rem;
+}
 
 #modal-acolhimento {
     transform: translate(-50%,-50%);
