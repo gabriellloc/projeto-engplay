@@ -1,0 +1,86 @@
+.progress-bar {
+  display: flex;
+  max-width: 55rem;
+  margin: 1rem auto;
+}
+
+.bar-stage {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.number-bar{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cl-desc);
+  border: 1px solid var(--cl-border-form);
+  box-shadow: 0 0 3rem var(--bg-color-dark);
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  color: var(--cl-white);
+  font: var(--bnt-cancel-m);
+
+  margin: .5rem;
+}
+
+.text-bar {
+  font: var(--bnt-cancel-m);
+  color: var(--cl-desc);
+}
+
+.center-bar {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.center-bar::before {
+  transform: translateY(-50%);
+  content: "";
+  position: absolute;
+  top: 42%;
+  left: 0;
+  border: 0px solid var(--cl-purple);
+  width: 0%;
+}
+
+.center-bar.Mid::before{
+  animation: progressMid 500ms both;
+}
+
+
+@keyframes progressMid {
+  to{
+    width: calc(50% - 1.5rem);
+    border: 1px solid var(--cl-purple);
+  }
+}
+
+.center-bar.End::before {
+  animation: progressEnd 500ms both;
+}
+
+@keyframes progressEnd {
+  from{
+    width: calc(50% - 2.5rem);
+    border: 1px solid var(--cl-purple);
+  }
+  to {
+    width: 100%;
+    border: 1px solid var(--cl-purple);
+  }
+}
+
+.active-background {
+  background: var(--linear-bg-cl);
+}
+
+.active-color {
+  color: var(--cl-purple);
+}
