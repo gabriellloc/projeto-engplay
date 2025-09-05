@@ -23,7 +23,7 @@ form div:not(:last-child){
   gap: .3rem;
 }
 
-form div:not(:last-child) label{
+form div label{
   align-content: center;
   font: var(--tx-sm);
   line-height: 100%;
@@ -66,7 +66,7 @@ form div:not(:last-child) input[type="radio"]:checked::before {
   transform: scale(1) translate(-50%,-50%);
 }
 
-form div:not(:last-child) input[type="text"]{
+form div section input[type="text"]{
   padding: .5rem 1rem;
   border: none;
   outline: 1px solid var(--cl-border-form);
@@ -76,10 +76,20 @@ form div:not(:last-child) input[type="text"]{
   transition: all 500ms ease;
 }
 
-form div:not(:last-child) input[type="text"]:focus {
+form div input[type="text"]:focus {
   outline: 3px solid var(--cl-border-form);
 }
 
-form div:not(:last-child) input[type="text"]:hover {
+form div input[type="text"]:hover {
   outline: 5px solid var(--cl-border-form);
+}
+
+.formOptions{
+  width: 75%;
+  padding: 1rem;
+  border-radius: .7rem;
+  border: 2px solid var(--cl-border-form);
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
 }
