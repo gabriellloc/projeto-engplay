@@ -1,3 +1,4 @@
+import { benefits } from "./benefits"
 import { keepSubs } from "./bntKeepSub"
 
 export function feedback(){
@@ -7,13 +8,13 @@ export function feedback(){
   progressBarHTML.innerHTML = `
     <section class="progress-bar">
       <div class="bar-stage">
-        <div class="number-bar active-background">1</div>
-        <label class="text-bar active-color">FEEDBACK</label>
+        <div class="number-bar active-background" id="num-one">1</div>
+        <label class="text-bar active-color" id="text-one">FEEDBACK</label>
       </div>
 
-      <div class="bar-stage center-bar">
-        <div class="number-bar">2</div>
-        <label class="text-bar">BENEFÍCIOS</label>
+      <div class="bar-stage center-bar" id="center-bar">
+        <div class="number-bar" id="num-two">2</div>
+        <label class="text-bar" id="text-two">BENEFÍCIOS</label>
       </div>
 
       <div class="bar-stage">
@@ -27,7 +28,7 @@ export function feedback(){
   feedbackForm.innerHTML = `
     <h1>Podemos ouvir você rapidinho ?</h1>
     <hr>
-    <p>Entender seu motivo nos ajuda a evoluir. É rápido, basta escolher uma opção abaixo</p>
+    <p>Entender seu motivo nos ajuda a evoluir. É rápido, basta escolher uma opção abaixo.</p>
     <div>
       <input type="radio" name="feedback" id="dificuldades">
       <label for="dificuldades">Dificuldades com o suporte ao cliente.</label>
@@ -60,12 +61,39 @@ export function feedback(){
 
     <div class="divBnt">
       <button class="manterAss keepSub">Manter Assinatura</button>
-      <button class="continueBnt" id="">Continuar</button>
+      <button class="continueBnt" type="submit">Continuar</button>
     </div>
   `
-  feedbackForm.addEventListener("submit", (event)=> {
-    event.preventDefault()
-  })
   mainContent.append(progressBarHTML, feedbackForm)
+
+  const inputValueText = document.querySelector("#Other")
+  let textValue = ""
+  inputValueText.addEventListener("input", () => {
+    const inputValue = document.querySelector("input[name='feedback']:checked");
+    textValue = inputValueText.value
+    
+    // Desmarca caso o usuário tenha marcado um radio
+    if (inputValue != null){
+        inputValue.checked = false
+    }
+  })
+
+  const inputRadios = document.querySelectorAll("input[name='feedback']");
+  inputRadios.forEach(inp => {
+    inp.addEventListener("click", () => {
+      inputValueText.value = ""
+      textValue = ""
+    })
+  })
+
+  feedbackForm.addEventListener("submit", (event)=> {
+    const inputValue = document.querySelector("input[name='feedback']:checked");
+    event.preventDefault()
+    if(textValue == "" && inputValue === null){
+      return alert("Preencha os dados.")
+    }
+
+    benefits()
+  })
   keepSubs()
 }

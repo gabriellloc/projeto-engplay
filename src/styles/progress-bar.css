@@ -1,7 +1,7 @@
 .progress-bar {
   display: flex;
-  max-width: 55rem;
-  margin: 1rem auto;
+  max-width: var(--mx-width);
+  margin: 1rem auto 2rem;
 }
 
 .bar-stage {
@@ -26,6 +26,7 @@
   font: var(--bnt-cancel-m);
 
   margin: .5rem;
+  transition: all 500ms ease;
 }
 
 .text-bar {
@@ -57,7 +58,7 @@
 
 @keyframes progressMid {
   to{
-    width: calc(50% - 1.5rem);
+    width: calc(50% - 2.5rem);
     border: 1px solid var(--cl-purple);
   }
 }

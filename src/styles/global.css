@@ -69,6 +69,8 @@ body {
     --border-aprove: #055814;
     --cl-bnt-aprove-hover:rgba(107, 199, 20, 0.705);
     --cl-bnt-aprove: #6BC714;
+
+    --mx-width: 65rem;
 }
 
 a {
