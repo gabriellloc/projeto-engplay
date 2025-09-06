@@ -1,0 +1,117 @@
+.finalizationDiv {
+  max-width: var(--mx-width);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.finalizationDiv h1 {
+  font: var(--title-sl);
+  color: var(--cl-lightblue);
+}
+
+.finalizationDiv > p:nth-child(3) {
+  font: var(--tx-ss);
+  color: var(--cl-desc);
+  margin-bottom: .5rem;
+}
+
+.finalizationDiv span {
+  font: var(--tx-sl);
+  color: var(--cl-desc);
+  width: 93%;
+  margin: .3rem auto;
+}
+
+.finalizationDiv .detailsList{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.detailsList p {
+  color: var(--cl-lightblue);
+  font: var(--tx-sm);
+}
+
+.detailsList ul {
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+  width: 95%;
+  margin: auto;
+  background-color: var(--cl-ul);
+  border-radius: .5rem;
+  padding: .7rem 1.5rem;
+  list-style: disc;
+  box-shadow: var(--box-shadow-list);
+}
+
+.detailsList ul li {
+  font: var(--bnt-cancel-s);
+}
+
+.termsDiv{
+  margin: .4rem auto;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--cl-lightblue);
+  font: var(--tx-ss);
+}
+
+.termsDiv input[type="checkbox"]{
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  min-width: 1.1rem;
+  min-height: 1.1rem;
+  border: 1px solid var(--cl-lightblue);
+  border-radius: .3rem;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+}
+
+.termsDiv input[type="checkbox"]::before {
+  font: var(--bnt-cancel-m-atention);
+  color: var(--cl-lightblue);
+  content: "🗸";
+  position: absolute;
+  transform: scale(0) translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  transition: 120ms transform ease-in-out;
+}
+
+.termsDiv input[type="checkbox"]:checked::before {
+  transform: scale(1) translate(-50%,-50%);
+}
+
+.finalizationDiv button{
+  padding: .875rem;
+  margin: 1rem 2rem 0 auto;
+  font: var(--bnt-cancel-m);
+  outline: 2px solid var(--cl-purple);
+  background: var(--bg-color-dark);
+  border-radius: .5rem;
+  color: var(--cl-purple);
+  cursor: pointer;
+  width: fit-content;
+  transition: all 300ms ease-in;
+}
+
+.finalizationDiv button:hover {
+  transform: scale(1.07);
+  outline: 0px solid transparent;
+}
+
+.finalizationDiv button:disabled, .finalizationDiv button:disabled:hover {
+  color: var(--cl-desc);
+  border: 1px solid var(--cl-desc);
+  transform: scale(.9) translateY(3px);
+  cursor: default;
+  outline: 0px solid transparent;
+}

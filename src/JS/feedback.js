@@ -18,8 +18,8 @@ export function feedback(){
       </div>
 
       <div class="bar-stage">
-        <div class="number-bar">3</div>
-        <label class="text-bar">FINALIZAÇÃO</label>
+        <div class="number-bar" id="num-three">3</div>
+        <label class="text-bar" id="text-three">FINALIZAÇÃO</label>
       </div>
     </section>
   `
@@ -70,6 +70,13 @@ export function feedback(){
   `
   localMain.append(progressBarHTML, feedbackForm)
   mainContent.append(localMain)
+
+  const numOne = document.querySelector("#num-one")
+  const textOne = document.querySelector("#text-one")
+  numOne.classList.add("box-shadow")
+  
+  numOne.classList.add("scale")
+  textOne.classList.add("scale")
 
   const inputValueText = document.querySelector("#Other")
   let textValue = ""

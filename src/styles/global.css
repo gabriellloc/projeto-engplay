@@ -32,6 +32,7 @@ body {
     --tx-md: 600 1.25rem/1.15 var(--ff); /* 20px*/
     --tx-sm: 600 1rem/1 var(--ff); /* 16px */
     --tx-ss: 600 .875rem/1 var(--ff); /*  */
+    --tx-sl: 600 .8rem/1 var(--ff); /*  */
 
     --bnt-cancel-sm: 500 .875rem/1 var(--ff); /* 8px */
     --bnt-cancel-md: 500 1.2rem/1 var(--ff); /* 19,2 */
@@ -44,6 +45,7 @@ body {
     --cl-white: #fff;
     --cl-black: #000;
     --cl-desc: #8F8D8D;
+    --cl-ul: #EDEDED;
     --cl-darkgreen: #367623;
     --cl-lightgreen: #BFEAB2;
     --cl-lightblue: #464EE5;
@@ -52,6 +54,7 @@ body {
     --cl-border-form: #D9D9D9;
     --bg-offers: #F4F4F4;
     --box-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+    --box-shadow-list: 2px 3px .3rem rgba(0, 0, 0, .5);
     
     --linear-bg-cl: linear-gradient(90deg, #464EE5, #7203E1);
 

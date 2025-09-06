@@ -17,7 +17,6 @@
   justify-content: center;
   align-items: center;
   background-color: var(--cl-desc);
-  border: 1px solid var(--cl-border-form);
   box-shadow: 0 0 3rem var(--bg-color-dark);
   border-radius: 50%;
   width: 3rem;
@@ -32,6 +31,7 @@
 .text-bar {
   font: var(--bnt-cancel-m);
   color: var(--cl-desc);
+  transition: all 500ms ease;
 }
 
 .center-bar {
@@ -39,6 +39,10 @@
   align-items: center;
   justify-content: center;
   position: relative;
+}
+
+#num-two{
+  outline: .4rem solid transparent;
 }
 
 .center-bar::before {
@@ -84,4 +88,12 @@
 
 .active-color {
   color: var(--cl-purple);
+}
+
+.active-background.box-shadow {
+  box-shadow: 0 0 .5rem var(--cl-lightblue);
+}
+
+.scale{
+  transform: scale(1.08);
 }

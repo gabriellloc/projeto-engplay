@@ -1,14 +1,24 @@
 import { keepSubs } from "./bntKeepSub"
+import { finalization } from "./finalization"
 
 export function benefits(){
   const progressBar = document.querySelector("#center-bar")
   progressBar.classList.add("Mid")
+
+  const numOne = document.querySelector("#num-one")
+  const textOne = document.querySelector("#text-one")
+  numOne.classList.remove("box-shadow")
+  numOne.classList.remove("scale")
+  textOne.classList.remove("scale")
   
   const numTwo = document.querySelector("#num-two")
+  numTwo.classList.add("box-shadow")
   numTwo.classList.add("active-background")
   const textTwo = document.querySelector("#text-two")
   textTwo.classList.add("active-color")
 
+  numTwo.classList.add("scale")
+  textTwo.classList.add("scale")
   const form = document.querySelector("form")
   form.remove()
 
@@ -69,9 +79,12 @@ export function benefits(){
 
     <div class="divBntBenefits">
       <button class="manterAss keepSub">Manter Assinatura</button>
-      <button class="continueBnt">Continuar</button>
+      <button class="continueBnt" id="btnFinalization">Continuar</button>
     </div>
   `
   localMain.append(benefitsDiv)
   keepSubs()
+
+  const BtnFinalization = document.querySelector("#btnFinalization")
+  BtnFinalization.addEventListener("click", finalization)
 }
