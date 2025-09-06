@@ -1,0 +1,122 @@
+.confirmModal{
+  transform: translate(-50%,-50%) scale(1.2);
+  max-width: var(--mx-width);
+  border: none;
+  top: 50%;
+  left: 50%;
+  background-color: var(--bg-color-dark);
+  border-radius: .8rem;
+  box-shadow: var(--box-shadow);
+}
+
+.confirmDiv{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  padding: 1rem;
+  margin: .5rem;
+}
+
+.confirmDiv h1 {
+  font: var(--title-ssl);
+  color: var(--cl-lightblue);
+  text-align: center;
+}
+
+.confirmDiv p {
+  font: var(--tx-sl);
+  color: var(--cl-desc);
+  text-align: center;
+}
+
+.confirmDiv hr {
+  width: 90%;
+  margin: auto;
+}
+
+.confirmDiv > div:not(:last-child) {
+  display: flex;
+  flex-direction: column;
+  gap: .35rem;
+  margin-bottom: .5rem;
+}
+
+.confirmDiv label{
+  font: var(--bnt-cancel-sm);
+  width: fit-content;
+}
+
+.confirmDiv input[type="text"]{
+  padding: .4rem 1rem;
+  width: 100%;
+  border: none;
+  outline: 1px solid var(--cl-border-form);
+  border-radius: .5rem;
+  font: var(--bnt-cancel-sm);
+  color: rgba(0, 0, 0, .7);
+  transition: all 500ms ease;
+  box-shadow: var(--box-shadow-list);
+}
+
+.confirmDiv input[type="text"]:focus {
+  outline: 3px solid var(--cl-border-form);
+  box-shadow: none;
+}
+
+.confirmDiv input[type="text"]:hover {
+  outline: 4px solid var(--cl-border-form);
+  box-shadow: none;
+}
+
+.confirmDiv .btnConfirms {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: .8rem;
+  margin-bottom: .5rem;
+}
+
+.manterBntConfirm {
+  background-image: var(--linear-bg-cl);
+  padding: .8rem 1.6rem;
+  color: var(--cl-white);
+  font: var(--bnt-cancel-s);
+  border-radius: .5rem;
+  transition: all 500ms ease;
+  cursor: pointer;
+}
+
+.manterBntConfirm:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 .6rem var(--cl-lightblue);
+}
+
+.continueBntConfirm {
+  padding: .8rem;
+  font: var(--bnt-cancel-s);
+  border: 1px solid var(--cl-purple);
+  background: var(--bg-color-dark);
+  border-radius: .5rem;
+  color: var(--cl-purple);
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+
+.continueBntConfirm:hover {
+  transform: scale(1.03);
+  color: rgb(0, 0, 0, .3);
+  border: 1px solid transparent;
+}
+
+.confirmDiv .position {
+  position: relative;
+}
+
+.passwordBtn::before{
+  content: "👁️";
+  position: absolute;
+  transform: translate(-150%, -50%);
+  top: 50%;
+  left: 100%;
+  cursor: default;
+}

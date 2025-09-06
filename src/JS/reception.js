@@ -29,6 +29,7 @@ export function reception(){
   receptionModal.addEventListener("close", ()=>{
     nav.classList.remove("blur")
     content.classList.remove("blur")
+    receptionModal.remove()
   })
   keepSubs()
   const bntFeedback = document.querySelectorAll("#bntFeedback")

@@ -45,7 +45,7 @@ export function finalization(){
 
     <div class="termsDiv">
       <input type="checkbox" id="terms">
-      <label for="terms">Ao concluir este cancelamento, você declara ciência e concordância com os pontos acima, nos termos do contrato de serviços digitais da Engplay</label>
+      <label for="terms"></label>
     </div>
       
     <button disabled id="btnFinalizar">Finalizar</button>

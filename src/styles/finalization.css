@@ -61,6 +61,10 @@
   font: var(--tx-ss);
 }
 
+.termsDiv label::before{
+  content: "Ao concluir este cancelamento, você declara ciência e concordância com os pontos acima, nos termos do contrato de serviços digitais da Engplay.";
+}
+
 .termsDiv input[type="checkbox"]{
   appearance: none;
   -webkit-appearance: none;
