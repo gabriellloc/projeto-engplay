@@ -1,4 +1,5 @@
 import { keepSubs } from "./bntKeepSub"
+import { privilege } from "./privilege"
 
 export function confirmCancel(){
   const confirmModal = document.createElement("dialog")
@@ -71,4 +72,7 @@ export function confirmCancel(){
       password.value = formatPassword
     }
   })
+
+  const btnPrivilege = document.querySelector("#btnPrivilege")
+  btnPrivilege.addEventListener("click", privilege)
 }

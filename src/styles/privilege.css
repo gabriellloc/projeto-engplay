@@ -1,0 +1,52 @@
+.privilegeDiv {
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+  width: 30rem;
+}
+
+.privilegeDiv img {
+  width: 3.5rem;
+  margin: 1rem auto;
+}
+
+.privilegeDiv .byeTitle {
+  font: var(--title-ssl);
+  text-align: center;
+  color: var(--cl-lightblue);
+  text-transform: uppercase;
+}
+
+.privilegeDiv .byeText {
+  text-align: center;
+  margin: auto;
+  color: var(--cl-desc);
+  font: var(--tx-ss);
+  width: 80%;
+}
+
+.privilegeDiv button {
+  position: relative;
+  font: var(--bnt-cancel-m);
+  color: var(--cl-lightblue);
+  background: #fff;
+  margin: 1rem auto;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  width: fit-content;
+  cursor: pointer;
+  transition: all 500ms;
+}
+
+.privilegeDiv button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #464EE5, #7203E1);
+  z-index: -1;
+}
+
+.privilegeDiv button:hover{
+  box-shadow: 0 0 1rem var(--cl-lightblue);
+}
