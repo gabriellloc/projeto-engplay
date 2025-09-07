@@ -31,12 +31,12 @@ td {
 }
 
 .benefitsDiv h1 {
-  font: var(--title-sl);
+  font: var(--title-ssl);
   color: var(--cl-lightblue);
 }
 
 .benefitsDiv > p {
-  font: var(--tx-ss);
+  font: var(--tx-sl);
   color: var(--cl-desc);
   margin-bottom: .5rem;
 }
@@ -62,7 +62,7 @@ td {
 }
 
 .benefitsDiv h2 {
-  font: var(--tx-md);
+  font: var(--tx-ss);
   text-align: center;
   color: var(--cl-lightblue);
   margin-bottom: .875rem;
@@ -70,7 +70,7 @@ td {
 
 .benefitsDiv td p {
   text-align: center;
-  font: var(--bnt-cancel-s);
+  font: var(--bnt-cancel-ss);
   color: var(--cl-black);
 }
 

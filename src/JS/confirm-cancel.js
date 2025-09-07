@@ -50,15 +50,17 @@ export function confirmCancel(){
   let realPassword = "memberkit123"
   password.value = formatPassword
 
-  password.addEventListener("input", ()=> {
+  password.addEventListener("input", (event)=> {
+    const pos = event.target.selectionStart;
     let last = password.value.slice(-1)
     if(password.value.length == realPassword.length + 1){
       realPassword += last
+    } else if (password.value.length == realPassword.length - 1){
+      realPassword = realPassword.slice(0, pos) + realPassword.slice(pos + 1)
     }
     else {
       realPassword = realPassword.slice(0, -(realPassword.length - password.value.length))
     }
-    console.log(realPassword, password.value)
     formatPassword = password.value
     formatPassword = password.value.replace(/./g, "*")
     password.value = formatPassword
