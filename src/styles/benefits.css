@@ -1,7 +1,7 @@
 table {
   border-collapse: collapse;
   max-width: 58rem;
-  margin: .5rem auto;
+  margin: .3rem auto;
 }
 
 td {
@@ -27,7 +27,7 @@ td {
   margin: auto;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: .3rem;
 }
 
 .benefitsDiv h1 {
@@ -45,7 +45,7 @@ td {
   display: flex;
   gap: 1rem;
   width: 48rem;
-  margin: .5rem auto;
+  margin: .2rem auto;
   overflow: hidden;
 }
 
@@ -62,16 +62,26 @@ td {
 }
 
 .benefitsDiv h2 {
-  font: var(--tx-ss);
+  font: var(--tx-md);
   text-align: center;
   color: var(--cl-lightblue);
-  margin-bottom: .875rem;
+  margin-bottom: .8rem;
 }
 
 .benefitsDiv td p {
   text-align: center;
-  font: var(--bnt-cancel-ss);
+  font: var(--bnt-cancel-s);
   color: var(--cl-black);
+}
+
+@media (width < 60em) {
+    .benefitsDiv h2 {
+    font: var(--tx-ss);
+  }
+
+  .benefitsDiv td p {
+    font: var(--bnt-cancel-ss);
+  }
 }
 
 @keyframes rolling {

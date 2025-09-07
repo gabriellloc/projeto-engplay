@@ -79,6 +79,12 @@
     background: #F9F6FC;
 }
 
+@media (width < 50em) {
+    .main-r {
+        width: 80%;
+    }
+}
+
 .charge {
     display: flex;
     flex-direction: column;
