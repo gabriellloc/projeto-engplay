@@ -124,11 +124,18 @@ ul {
     border-radius: .5rem;
     transition: all 500ms ease;
     cursor: pointer;
+    margin: auto;
 }
 
 .manterAss:hover {
     transform: scale(1.07);
     box-shadow: 0 0 .6rem var(--cl-lightblue);
+}
+
+@media (width < 60em) {
+    .manterAss {
+        font: var(--bnt-cancel-m);
+    }
 }
 
 .continueBnt {
@@ -140,6 +147,7 @@ ul {
     color: var(--cl-purple);
     cursor: pointer;
     transition: all 300ms ease-in;
+    margin: auto;
 }
 
 .continueBnt:hover {
@@ -148,8 +156,15 @@ ul {
     border: 1px solid transparent;
 }
 
+@media (width < 60em) {
+    .continueBnt {
+        font: var(--bnt-cancel-m);
+    }
+}
+
+
 .divBnt {
-  margin-top: 1rem;
+  margin: 1rem auto;
   display: flex;
   flex-wrap: wrap;
   gap: 1.3rem;

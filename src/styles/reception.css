@@ -11,7 +11,7 @@
 .receptionDiv {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1rem;
     padding: 1.5rem;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .receptionDiv .byeTitle {
-    font: var(--title-large);
+    font: var(--title-ls);
     text-align: center;
     color: var(--cl-lightblue);
     text-transform: uppercase;
@@ -54,14 +54,14 @@
     text-align: center;
     margin: auto;
     color: var(--cl-black);
-    font: var(--tx-md);
-    width: 80%;
+    font: var(--tx-sm);
+    max-width: 33rem;
 }
 
 @media (width < 80em) {
     .receptionDiv .byeText{
-        width: 80%;
-        font: var(--tx-sm);
+        max-width: 40rem;
+        font: var(--tx-ss);
     }
 }
 

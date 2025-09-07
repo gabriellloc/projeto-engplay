@@ -4,6 +4,12 @@
   margin: 1rem auto 2rem;
 }
 
+@media (width < 40em) {
+  .progress-bar{
+    display: none;
+  }
+}
+
 .bar-stage {
   display: flex;
   flex-direction: column;
