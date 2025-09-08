@@ -128,7 +128,7 @@ form div input[type="text"]:hover {
 }
 
 .formOptions{
-  width: 75%;
+  width: 85%;
   padding: 1rem;
   border-radius: .7rem;
   border: 2px solid var(--cl-border-form);

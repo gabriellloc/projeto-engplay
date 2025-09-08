@@ -1,7 +1,7 @@
 table {
   border-collapse: collapse;
   max-width: 58rem;
-  margin: .3rem auto;
+  margin: .875rem auto;
 }
 
 td {
@@ -49,7 +49,7 @@ td {
   overflow: hidden;
 }
 
-@media (width < 80em) {
+@media (width <= 80em) {
   .divImgs {
     display: none;
   }
@@ -75,7 +75,7 @@ td {
 }
 
 @media (width < 60em) {
-    .benefitsDiv h2 {
+  .benefitsDiv h2 {
     font: var(--tx-ss);
   }
 

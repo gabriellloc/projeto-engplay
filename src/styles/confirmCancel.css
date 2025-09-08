@@ -9,6 +9,12 @@
   box-shadow: var(--box-shadow);
 }
 
+@media (width < 50em) {
+  .confirmModal {
+    width: 70%;
+  }
+}
+
 .confirmDiv{
   display: flex;
   flex-direction: column;

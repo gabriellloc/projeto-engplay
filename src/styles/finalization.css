@@ -38,7 +38,7 @@
 .detailsList ul {
   display: flex;
   flex-direction: column;
-  gap: .3rem;
+  gap: .4rem;
   width: 95%;
   margin: auto;
   background-color: var(--cl-ul);
@@ -50,6 +50,17 @@
 
 .detailsList ul li {
   font: var(--bnt-cancel-s);
+}
+
+@media (width > 50em) {
+  .detailsList ul {
+    padding: 1rem 2.5rem;
+    gap: .7rem;
+  }
+
+  .detailsList ul li {
+    font: var(--bnt-cancel-m);
+  }
 }
 
 .termsDiv{

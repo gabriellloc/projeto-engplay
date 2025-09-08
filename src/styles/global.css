@@ -178,7 +178,7 @@ ul {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 2.5rem;
+    gap: 1rem;
 }
 
 #modal-acolhimento {
