@@ -17,7 +17,7 @@
 </p>
 
 ## 📝 Licença
-[![Static Badge](https://img.shields.io/badge/License-MIT-green)](https://github.com/gabriellloc/pagina-cancelamento#MIT-1-ov-file)
+[![Static Badge](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 ## 💻 Tecnologias Utilizadas
 
