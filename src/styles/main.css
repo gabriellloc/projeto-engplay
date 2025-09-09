@@ -3,15 +3,10 @@
     height: 100%;
 }
 
-.removeScroll{
-    height: 100%;
-}
-
 /* Lado esquerdo da página */
 
 .main-l {
     background-image: linear-gradient(-7deg, #7203E1 50%, #126FEB);
-    height: 100%;
     transition: all 200ms ease-in;
     width: 16rem;
 }
