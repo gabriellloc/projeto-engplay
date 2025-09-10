@@ -38,6 +38,7 @@ body {
     --tx-ss: 600 .875rem/1 var(--ff); /*  */
     --tx-sl: 600 .8rem/1 var(--ff); /*  */
 
+    --incorrect: 700 .65rem/1 var(--ff);
     --bnt-cancel-sm: 500 .875rem/1 var(--ff); /* 8px */
     --bnt-cancel-md: 500 1.2rem/1 var(--ff); /* 19,2 */
     --bnt-cancel-m: 500 1rem/1 var(--ff);
@@ -183,6 +184,12 @@ ul {
     justify-content: space-around;
     flex-wrap: wrap;
     gap: 1rem;
+}
+
+.incorrect {
+    font: var(--incorrect);
+    color: var(--cl-bnt-danger-hover);
+    /* text-transform: uppercase; */
 }
 
 #modal-acolhimento {

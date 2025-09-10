@@ -20,11 +20,11 @@ export function confirmCancel(){
     <h1>CANCELAMENTO DE ASSINATURA</h1>
     <p>Para conseguirmos cancelar apropriadamente, Confirme sua identidade:</p>
     <hr>
-    <div>
+    <div id="localEmail">
       <label for="email">E-mail de cadastro:</label>
       <input type="text" id="email">
     </div>
-    <div>
+    <div id="localPassword">
       <label for="password">Senha:</label>
       <div class="position">
         <input type="text" id="password">
@@ -66,10 +66,12 @@ export function confirmCancel(){
 
   // Atribuindo os valores do email e da senha com a formatação
   const email = document.querySelector("#email")
-  email.value = "demo@memberkit.com.br"
+  const yourEmail = "demo@memberkit.com.br"
+  email.value = yourEmail
   const password = document.querySelector("#password")
+  const yourPassword = "memberkit123"
   let formatPassword = "************"
-  let realPassword = "memberkit123"
+  let realPassword = yourPassword
   let keyPress = ""
   password.value = formatPassword
 
@@ -100,6 +102,33 @@ export function confirmCancel(){
     }
   })
 
+  const localEmail = document.querySelector("#localEmail")
+  const localPassword = document.querySelector("#localPassword")
+
+  const emailIncorrect = document.createElement("div")
+  emailIncorrect.textContent = "E-mail incorreto"
+  emailIncorrect.classList.add("incorrect")
+
+  const passwordIncorrect = document.createElement("div")
+  passwordIncorrect.textContent = "Senha incorreta"
+  passwordIncorrect.classList.add("incorrect")
+
   const btnPrivilege = document.querySelector("#btnPrivilege")
-  btnPrivilege.addEventListener("click", privilege)
+  btnPrivilege.addEventListener("click", () => {
+    if (email.value != yourEmail){
+      localEmail.append(emailIncorrect)
+      return
+    } else {
+      emailIncorrect.remove()
+    }
+
+    if(realPassword != yourPassword){
+      localPassword.append(passwordIncorrect)
+      return
+    } else {
+      passwordIncorrect.remove()
+    }
+
+    privilege()
+  })
 }
