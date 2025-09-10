@@ -6,18 +6,22 @@
     box-sizing: border-box;
 }
 
-body {
-    overflow: hidden;
-    background-color: var(--bg-color-dark);
-    height: 100vh;
+html, body {
+    height: 100%;
 }
 
-@media (height <= 650px) {
+body {
+    min-height: 103vh;
+    overflow: auto;
+    background-color: var(--bg-color-dark);
+}
+
+/* @media (height <= 650px) {
     body {
         overflow-x: hidden;
         overflow-y: auto;
     }
-}
+} */
 
 :root {
     --ff: "Noto Sans HK", sans-serif;
