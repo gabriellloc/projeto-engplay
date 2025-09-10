@@ -1,3 +1,10 @@
+/*
+  Etapa de obter o motivo do cancelamento do usuário
+
+  --Etapa 02--
+*/
+
+
 import { benefits } from "./benefits"
 import { keepSubs } from "./bntKeepSub"
 

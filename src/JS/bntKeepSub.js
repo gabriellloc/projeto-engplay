@@ -1,9 +1,21 @@
+/*
+    Arquivo responsável pelo botão de manter assinatura.
+
+    --Desenvolvimento--
+*/
+
 import { reception } from "./reception"
 
+// Função de manter assinatura.
 export function keepSubs(){
-  const keepSub = document.querySelectorAll(".keepSub")
+	// Obtendo todos os botões de manter a assinatura.
+	const keepSub = document.querySelectorAll(".keepSub")
+
+	// Retorna um Array, assim sendo necessário percorrer esse array e adicionar um evento em cada item.
   keepSub.forEach((bnt => {
+		// Adicionando o evento
     bnt.addEventListener("click", () => {
+			// Rescrevendo o body(Uma das soluções encontradas)
       const body = document.querySelector("body")
       body.innerHTML = `<div class="nav" id="nav">
         <section>
@@ -96,6 +108,8 @@ export function keepSubs(){
             </div>
         </section>
       </main>`
+
+			// Adicionando o botão de cancelar
       const btnCancel = document.querySelector("#cancel")
       btnCancel.addEventListener("click", cancel)
       

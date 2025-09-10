@@ -1,3 +1,7 @@
+/* 
+  Arquivo de importação dos CSS
+*/
+
 @import url(styles/global.css);
 @import url(styles/main.css);
 @import url(styles/nav.css);

@@ -1,5 +1,9 @@
-// CSS
+/*
+  Arquivo principal JS
+*/
+
+// Importação do CSS
 import "./index.css"
 
-// JS
+// Importação do JS
 import "./JS/click.js"
