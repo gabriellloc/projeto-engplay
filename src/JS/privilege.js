@@ -31,10 +31,13 @@ export function privilege(){
                   <p>Você não possui uma assinatura ativa no momento. Os dados relacionados serão mantidos por até 90 dias antes da remoção</p>
               </div>
               <div class="stats">
-                  <button id="cancel">Ativar</button>
+                  <button id="cancel" class="act">Ativar</button>
               </div>
           </section>
       </div>
     `
+
+    const act = document.querySelector(".act")
+    act.addEventListener("click", ()=> window.location.reload())
   })
 }
