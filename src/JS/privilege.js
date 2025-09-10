@@ -7,7 +7,7 @@ export function privilege(){
   privilegeDiv.classList.add("privilegeDiv")
   privilegeDiv.innerHTML = `
     <img src="assets/icons/logo (ENGPLAY).svg" alt="Logo" class="logo">
-    <h1 class="byeTitle">Foi um privilégio ter você com a gente.</h1>
+    <h1 class="byeTitle">Foi um privilégio ter você com a gente</h1>
     <p class="byeText">Guardaremos o que você construiu aqui com carinho. Volte quando sentir que é o momento certo.</p>
     <button id="exitPrivilege">Fechar</button>
   `
