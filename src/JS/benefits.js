@@ -1,28 +1,45 @@
+/*
+  Etapa dos benefícios que serão perdidos com o cancelamento
+
+  --Etapa 03--
+*/
+
+// Importação do botão de manter assinatura e da próxima etapa
 import { keepSubs } from "./bntKeepSub"
 import { finalization } from "./finalization"
 
 export function benefits(){
+  // Obtendo o elemento responsável pela animação da barra de progresso
   const progressBar = document.querySelector("#center-bar")
+  // Adicionando a class "Mid" para efetuar a animação
   progressBar.classList.add("Mid")
 
+  // Removendo a formatação da primeira etapa em destaque
   const numOne = document.querySelector("#num-one")
   const textOne = document.querySelector("#text-one")
   numOne.classList.remove("box-shadow")
   numOne.classList.remove("scale")
   textOne.classList.remove("scale")
   
+  // Colocando a formatação em destaque na segunda etapa
   const numTwo = document.querySelector("#num-two")
   numTwo.classList.add("box-shadow")
   numTwo.classList.add("active-background")
+  numTwo.classList.add("scale")
+
   const textTwo = document.querySelector("#text-two")
   textTwo.classList.add("active-color")
-
-  numTwo.classList.add("scale")
   textTwo.classList.add("scale")
+
+  // Obtendo o form
   const form = document.querySelector("form")
+  // Removendo o form da tela
   form.remove()
 
+  // Pegando o localMain
   const localMain = document.querySelector("#localMain")
+  
+  // Cria uma div, adiciona uma class e o seu conteúdo
   const benefitsDiv = document.createElement("div")
   benefitsDiv.classList.add("benefitsDiv")
   benefitsDiv.innerHTML = `
@@ -82,9 +99,15 @@ export function benefits(){
       <button class="continueBnt" id="btnFinalization">Continuar</button>
     </div>
   `
+
+  // Adiciona a div benefitsDiv no localMain
   localMain.append(benefitsDiv)
+
+  // Obtendo o botão de manter assinatura
   keepSubs()
 
+  // Obtendo o botão para a próxima etapa
   const BtnFinalization = document.querySelector("#btnFinalization")
+  // Adicionado o evento para seguir para a próxima etapa
   BtnFinalization.addEventListener("click", finalization)
 }

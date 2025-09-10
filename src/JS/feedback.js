@@ -4,13 +4,20 @@
   --Etapa 02--
 */
 
-
+// Importação do botão de manter assinatura e da próxima etapa
 import { benefits } from "./benefits"
 import { keepSubs } from "./bntKeepSub"
 
 export function feedback(){
+  // Obtendo o local que vai ficar o conteúdo e deixando ele vazio
   const mainContent = document.querySelector("#mainContent")
   mainContent.innerHTML = ""
+
+  // Criando o local que vai ficar a barra de progresso e o conteúdo da etapa
+  const localMain = document.createElement("div")
+  localMain.setAttribute("id", "localMain")
+
+  // Criando a barra de progresso e seu conteúdo
   const progressBarHTML = document.createElement("div")
   progressBarHTML.innerHTML = `
     <section class="progress-bar">
@@ -30,8 +37,8 @@ export function feedback(){
       </div>
     </section>
   `
-  const localMain = document.createElement("div")
-  localMain.setAttribute("id", "localMain")
+
+  // Criando o elemento form para obter as informações do motivo do cancelamento.
   const feedbackForm = document.createElement("form")
   feedbackForm.innerHTML = `
     <h1>Podemos ouvir você rapidinho ?</h1>
@@ -75,19 +82,27 @@ export function feedback(){
       <button class="continueBnt" type="submit">Continuar</button>
     </div>
   `
+
+  // Adicionando a barra de progresso e o form no localMain
   localMain.append(progressBarHTML, feedbackForm)
+
+  // Colocando o localMain na página
   mainContent.append(localMain)
 
+  // Colocando a estilização de destaque na primeira etapa
   const numOne = document.querySelector("#num-one")
   const textOne = document.querySelector("#text-one")
   numOne.classList.add("box-shadow")
-  
   numOne.classList.add("scale")
   textOne.classList.add("scale")
 
+  // Fazendo o formulário "conversar" entre as opções
   const inputValueText = document.querySelector("#Other")
+  
+  // Variável que vai armazenar o valor do input
   let textValue = ""
   inputValueText.addEventListener("input", () => {
+    // Obtendo somente o input marcado.
     const inputValue = document.querySelector("input[name='feedback']:checked");
     textValue = inputValueText.value
     
@@ -97,7 +112,9 @@ export function feedback(){
     }
   })
 
+  // Obtendo todos os inputRadios
   const inputRadios = document.querySelectorAll("input[name='feedback']");
+  // Percorrendo e zerando caso o usuário tenha colocado conteúdo no input text e em seguida marcado um input
   inputRadios.forEach(inp => {
     inp.addEventListener("click", () => {
       inputValueText.value = ""
@@ -105,14 +122,24 @@ export function feedback(){
     })
   })
 
+  // Atribuindo o evento de submit no form
   feedbackForm.addEventListener("submit", (event)=> {
-    const inputValue = document.querySelector("input[name='feedback']:checked");
+    // Removendo a função de reload padrão do navegador
     event.preventDefault()
+
+    // Obtendo o inputRadio marcado
+    const inputValue = document.querySelector("input[name='feedback']:checked");
+
+    // Condição que verifica se tem algum inputRadio marcado ou se o usuário digitou algo no inputText
     if(textValue == "" && inputValue === null){
+      // Caso ele nao tenha marcado nada, retorna um alert na tela
       return alert("Preencha os dados.")
     }
 
+    // Executa a próxima etapa
     benefits()
   })
+
+  // Obtendo o botão de manter assinatura
   keepSubs()
 }

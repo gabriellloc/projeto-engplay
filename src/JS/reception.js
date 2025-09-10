@@ -54,7 +54,7 @@ export function reception(){
     receptionModal.remove()
   })
 
-  // Pegando os botão de manter assinatura
+  // Obtendo o botão de manter assinatura
   keepSubs()
 
   // Pegando o botão de continuar para seguir o cancelamento

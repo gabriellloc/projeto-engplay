@@ -1,9 +1,19 @@
+/*
+  Etapa de confirmar os dados para cancelar, aqui será necessário que o usuário confirme os dados para efetuar o cancelamento.
+
+  --Etapa 05--
+*/
+
+// Importação da próxima etapa e do botão de manter assinatura
 import { keepSubs } from "./bntKeepSub"
 import { privilege } from "./privilege"
 
 export function confirmCancel(){
+  // Cria um elemento dialog com a class "confirmModal"
   const confirmModal = document.createElement("dialog")
   confirmModal.classList.add("confirmModal")
+
+  // Cria uma div com a class "confirmDiv" com seu conteúdo
   const confirmDiv = document.createElement("div")
   confirmDiv.classList.add("confirmDiv")
   confirmDiv.innerHTML = `
@@ -26,23 +36,35 @@ export function confirmCancel(){
       <button class="continueBntConfirm" id="btnPrivilege">Cancelar assinatura</button>
     </div>
   `
+
+  // Obtendo o localMain
   const localMain = document.querySelector("#localMain")
+  // Colocando a div "confirmDiv" no confirmModal
   confirmModal.append(confirmDiv)
+
+  // Adicionado o confirmModal no localMain
   localMain.appendChild(confirmModal)
+
+  // Obtendo o botão de manter assinatura
   keepSubs()
 
+  // Obtendo e estilizando o nav e o content com efeito de blur
   const nav = document.querySelector("#nav")
   const content = document.querySelector("#content")
   nav.classList.add("blur")
   content.classList.add("blur")
 
+  // Mostrando o modal na tela
   confirmModal.showModal()
+
+  // Colocando o evento de close no modal
   confirmModal.addEventListener("close", () => {
     nav.classList.remove("blur")
     content.classList.remove("blur")
     confirmModal.remove()
   })
 
+  // Atribuindo os valores do email e da senha com a formatação
   const email = document.querySelector("#email")
   email.value = "demo@memberkit.com.br"
   const password = document.querySelector("#password")
