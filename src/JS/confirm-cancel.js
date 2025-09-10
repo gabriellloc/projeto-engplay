@@ -70,22 +70,25 @@ export function confirmCancel(){
   const password = document.querySelector("#password")
   let formatPassword = "************"
   let realPassword = "memberkit123"
+  let keyPress = ""
   password.value = formatPassword
 
   password.addEventListener("input", (event)=> {
-    const pos = event.target.selectionStart;
-    let last = password.value.slice(-1)
+    const pos = event.target.selectionStart - 1;
+    let last = keyPress
     if(password.value.length == realPassword.length + 1){
-      realPassword += last
-    } else if (password.value.length == realPassword.length - 1){
-      realPassword = realPassword.slice(0, pos) + realPassword.slice(pos + 1)
-    }
-    else {
-      realPassword = realPassword.slice(0, -(realPassword.length - password.value.length))
+      realPassword = realPassword.slice(0, pos) + last + realPassword.slice(pos)
+    } else {
+      realPassword = realPassword.slice(0, pos+1) + realPassword.slice(pos+1 +(realPassword.length - password.value.length))
     }
     formatPassword = password.value
     formatPassword = password.value.replace(/./g, "*")
     password.value = formatPassword
+    password.setSelectionRange(pos + 1, pos + 1);
+  })
+
+  password.addEventListener("keypress", (e) => {
+    keyPress = e.key
   })
 
   const showPassword = document.querySelector(".passwordBtn")
