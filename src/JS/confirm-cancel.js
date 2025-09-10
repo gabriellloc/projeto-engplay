@@ -72,12 +72,11 @@ export function confirmCancel(){
   const yourPassword = "memberkit123"
   let formatPassword = "************"
   let realPassword = yourPassword
-  let keyPress = ""
   password.value = formatPassword
 
   password.addEventListener("input", (event)=> {
     const pos = event.target.selectionStart - 1;
-    let last = keyPress
+    let last = password.value.slice(-1)
     if(password.value.length == realPassword.length + 1){
       realPassword = realPassword.slice(0, pos) + last + realPassword.slice(pos)
     } else {
@@ -87,10 +86,6 @@ export function confirmCancel(){
     formatPassword = password.value.replace(/./g, "*")
     password.value = formatPassword
     password.setSelectionRange(pos + 1, pos + 1);
-  })
-
-  password.addEventListener("keypress", (e) => {
-    keyPress = e.key
   })
 
   const showPassword = document.querySelector(".passwordBtn")
