@@ -11,6 +11,12 @@
     width: 16rem;
 }
 
+@media (width < 60em) {
+    .main-l {
+        display: none;
+    }
+}
+
 .dad {
     display: flex;
     flex-direction: column;

@@ -4,12 +4,6 @@
   margin: 0 auto 1.5rem;
 }
 
-@media (width < 40em) {
-  .progress-bar{
-    display: none;
-  }
-}
-
 .bar-stage {
   display: flex;
   flex-direction: column;
@@ -38,6 +32,17 @@
   font: var(--bnt-cancel-m);
   color: var(--cl-desc);
   transition: all 500ms ease;
+}
+
+@media (width < 70em) {
+  .text-bar {
+    font: var(--bnt-cancel-ms);
+  }
+  .number-bar {
+    width: 2.5rem;
+    height: 2.5rem;
+    font: var(--bnt-cancel-s);
+  }
 }
 
 .center-bar {
