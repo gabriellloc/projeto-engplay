@@ -77,13 +77,13 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
 [☝️ voltar](#página-de-cancelamento-de-assinatura---engplay)
 
 ## 🧑‍🤝‍🧑 Autores
-- **[Isadora Matos Bispo](https://github.com/misabm)** - Líder do squad
-- **[Gabriel Oliveira Cardoso](https://github.com/gabriellloc)** - Desenvolvedor Front-End
-- **[Paulo Henrique Santiago Santos]()** - 
-- **[Lucas Gabriel dos Santos Azevedo]()** - 
-- **[Alan Oliveira Silva Júnior]()** - 
-- **[Carlos Eduardo Bezerra Menezes]()** - 
-- **[José Guilherme Oliveira Van Geem]()** - 
-- **[José Santos do Nascimento Neto]()** - 
-- **[Luiz Gustavo de Oliveira Tavares]()** -
-- **[Thiago Antonio de Albuquerque Passos]()** - 
+- **[Isadora Matos Bispo](https://github.com/misabm)** - Líder
+- **[Alan Oliveira Silva Júnior]()**
+- **[Carlos Eduardo Bezerra Menezes]()**
+- **[Gabriel Oliveira Cardoso](https://github.com/gabriellloc)**
+- **[José Guilherme Oliveira Van Geem]()** 
+- **[José Santos do Nascimento Neto]()** 
+- **[Lucas Gabriel dos Santos Azevedo]()** 
+- **[Luiz Gustavo de Oliveira Tavares]()**
+- **[Paulo Henrique Santiago Santos]()** 
+- **[Thiago Antonio de Albuquerque Passos]()**
