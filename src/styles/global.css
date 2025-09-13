@@ -29,7 +29,7 @@ body {
     --title-large: 700 2.5rem/1 var(--ff); /* 40px */
     --title-ls: 700 2rem/1 var(--ff);;
     --title-sl: 700 1.875rem/1 var(--ff); /* 30px*/
-    --title-ssl: 700 1.5rem/1 var(--ff); /* */
+    --title-ssl: 700 1.5rem/1.05 var(--ff); /* */
     --title-sssl: 700 1.3rem/1 var(--ff);
 
     --tx-lg: 600 1.625rem/1 var(--ff); /* 26px*/
@@ -141,6 +141,7 @@ ul {
 @media (width < 60em) {
     .manterAss {
         font: var(--bnt-cancel-m);
+        padding: .8rem;
     }
 }
 
@@ -165,6 +166,7 @@ ul {
 @media (width < 60em) {
     .continueBnt {
         font: var(--bnt-cancel-m);
+        padding: .8rem;
     }
 }
 
@@ -172,10 +174,8 @@ ul {
 .divBnt {
   margin: 1rem auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
+  gap: 1rem;
   justify-content: space-between;
-  padding-inline: 1.4rem;
 }
 
 .divBntBenefits{

@@ -168,12 +168,6 @@
     box-shadow: 2px 2px .2rem var(--cl-lightgreen);
 }
 
-@media (width < 50em) {
-    .stats .activation {
-        padding-inline: 5rem;
-    }
-}
-
 .stats button {
     --cl-bnt-cancel: #3c3c3c8f;
     --bg-bnt-cancel: #F9F6FC;
@@ -215,7 +209,6 @@
 
 @media (width < 50em) {
     .stats {
-        flex-direction: column;
         gap: 1rem;
     }
 }
