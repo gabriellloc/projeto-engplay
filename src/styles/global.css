@@ -16,13 +16,6 @@ body {
     background-color: var(--bg-color-dark);
 }
 
-/* @media (height <= 650px) {
-    body {
-        overflow-x: hidden;
-        overflow-y: auto;
-    }
-} */
-
 :root {
     --ff: "Noto Sans HK", sans-serif;
 
@@ -43,6 +36,7 @@ body {
     --bnt-cancel-md: 500 1.2rem/1 var(--ff); /* 19,2 */
     --bnt-cancel-m: 500 1rem/1 var(--ff);
     --bnt-cancel-s: 500 .87rem/1 var(--ff);
+    --bnt-cancel-ms: 500 .75rem/1 var(--ff);
     --bnt-cancel-ss: 500 .65rem/1 var(--ff);
     --bnt-cancel-m-atention: 600 1rem/1 var(--ff);
     --bnt-cancel-sm-atention-hover: 700 1rem/1 var(--ff);
