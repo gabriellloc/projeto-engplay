@@ -1,0 +1,68 @@
+.niceDecision {
+  transform: translate(-50%,-50%);
+  top: 50%;
+  left: 50%;
+  border: none;
+  border-radius: 22px;
+  box-shadow: var(--box-shadow);
+  min-width: 20rem;
+}
+
+.niceDecision div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem 3.4rem;
+}
+
+@media (width < 60em) {
+  .niceDecision div {
+    padding: 1.5rem 1rem;
+  }
+}
+
+.niceDecision div img {
+  max-width: 74px;
+  margin: auto;
+}
+
+.niceDecision div .byeTitle {
+  font: var(--title-ls);
+  text-align: center;
+  color: var(--cl-lightblue);
+  text-transform: uppercase;
+}
+
+.niceDecision .byeText {
+  text-align: center;
+  margin: auto;
+  color: var(--cl-black);
+  font: var(--tx-sm);
+}
+
+.niceDecision button {
+  position: relative;
+  border: 1px solid var(--cl-purple);
+  width: fit-content;
+  margin: auto;
+  padding: .5rem 1rem;
+  border-radius: .5rem;
+  font: var(--bnt-cancel-m);
+  color: var(--cl-lightblue);
+  transition: all 500ms ease;
+  background-color: #fff;
+}
+
+.niceDecision button::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #464EE5, #7203E1);
+  z-index: -1;
+}
+
+.niceDecision button:hover{
+  box-shadow: 0 0 1rem var(--cl-lightblue);
+  cursor: pointer;
+}
