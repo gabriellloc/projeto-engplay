@@ -7,3 +7,4 @@ import "./index.css"
 
 // Importação do JS
 import "./JS/click.js"
+import './JS/main-l.js'

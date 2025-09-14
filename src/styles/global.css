@@ -116,6 +116,18 @@ ul {
     display: none;
 }
 
+.main-l.sideBar {
+    position: fixed;
+    height: 100%;
+    transform: translateX(0);
+    z-index: 1;
+    box-shadow: var(--box-shadow-list);
+}
+
+h2.contentsOn.sideBar-Large {
+    display: block;
+}
+
 .manterAss {
     background-image: var(--linear-bg-cl);
     padding: .875rem 1.6rem;

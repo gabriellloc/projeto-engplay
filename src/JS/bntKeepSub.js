@@ -5,6 +5,7 @@
 */
 
 import { reception } from "./reception"
+import {btnMenuFun} from "./main-l.js"
 
 // Função de manter assinatura.
 export function keepSubs(){
@@ -109,7 +110,7 @@ export function keepSubs(){
         </section>
       </main>`
 
-			// Adicionando o botão de cancelar
+        // Adicionando o botão de cancelar
       const btnCancel = document.querySelector("#cancel")
       btnCancel.addEventListener("click", cancel)
       
@@ -118,7 +119,8 @@ export function keepSubs(){
         content.classList.add("blur")
       
         reception()
-      }
+    }
+    btnMenuFun()
     })
   }))
 }
