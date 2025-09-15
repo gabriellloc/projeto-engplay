@@ -36,6 +36,19 @@
 - **Node.js & npm:** Gerenciamento de dependências e execução dos scripts do projeto.
 - **Visual Studio Code:** Ambiente de desenvolvimento utilizado para escrever e organizar o código.
 
+## 🚀 Versões das Tecnologias
+- **@babel/cli**: ^7.28.3
+- **@babel/core**: ^7.28.3
+- **@babel/preset-env**: ^7.28.3
+- **babel-loader**: ^10.0.0
+- **copy-webpack-plugin**: ^13.0.1
+- **css-loader**: ^7.1.2
+- **html-webpack-plugin**: ^5.6.4
+- **style-loader**: ^4.0.0
+- **webpack**: ^5.101.3
+- **webpack-cli**: ^6.0.1
+- **webpack-dev-server**: ^5.2.2
+
 ## 📁 Estrutura de Pastas
   ```bash
   pagina-cancelamento/
@@ -77,7 +90,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
 [☝️ voltar](#página-de-cancelamento-de-assinatura---engplay)
 
 ## 🧑‍🤝‍🧑 Autores
-- **[Isadora Matos Bispo](https://github.com/misabm)** - Líder
+- **[Isadora Matos Bispo](https://github.com/misabm)** - **Líder**
 - **[Alan Oliveira Silva Júnior]()**
 - **[Carlos Eduardo Bezerra Menezes]()**
 - **[Gabriel Oliveira Cardoso](https://github.com/gabriellloc)**
