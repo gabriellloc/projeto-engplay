@@ -110,6 +110,7 @@ export function keepSubs(){
         </section>
         </main>`
 
+        // Criando o modal de agradecimento por ter ficado
         const niceDecision = document.createElement("dialog")
         niceDecision.classList.add("niceDecision")
         const niceDecisionDiv = document.createElement("div")
@@ -123,6 +124,8 @@ export function keepSubs(){
         body.appendChild(niceDecision)
         nav.classList.add("blur")
         content.classList.add("blur")
+
+        // Botão de fechar o modal
         const closeBtn = document.querySelector(".closeBtn")
         niceDecision.showModal()
         closeBtn.addEventListener("click", ()=> {
@@ -138,12 +141,14 @@ export function keepSubs(){
         btnCancel.addEventListener("click", cancel)
       
         function cancel(){
-        nav.classList.add("blur")
-        content.classList.add("blur")
-      
-        reception()
-    }
-    btnMenuFun()
+            nav.classList.add("blur")
+            content.classList.add("blur")
+        
+            // Função para chamar o botão de cancelar assinatura
+            reception()
+        }
+        // Barra lateral
+        btnMenuFun()
     })
   }))
 }
