@@ -15,6 +15,7 @@ const body = document.querySelector("body")
   Definindo o nome do Usuário.
   Necessário somente para desenvolvimento. (testar com outros nomes.)
 */
+
 let userName = "Isadora"
 
 // Função de recepção
