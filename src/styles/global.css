@@ -22,14 +22,14 @@ body {
     --title-large: 700 2.5rem/1 var(--ff); /* 40px */
     --title-ls: 700 2rem/1 var(--ff);;
     --title-sl: 700 1.875rem/1 var(--ff); /* 30px*/
-    --title-ssl: 700 1.5rem/1 var(--ff); /* */
+    --title-ssl: 700 1.5rem/1.05 var(--ff); /* */
     --title-sssl: 700 1.3rem/1 var(--ff);
 
-    --tx-lg: 600 1.625rem/1 var(--ff); /* 26px*/
+    --tx-lg: 600 1.625rem/1.1 var(--ff); /* 26px*/
     --tx-md: 600 1.25rem/1.15 var(--ff); /* 20px*/
-    --tx-sm: 600 1rem/1 var(--ff); /* 16px */
-    --tx-ss: 600 .875rem/1 var(--ff); /*  */
-    --tx-sl: 600 .8rem/1 var(--ff); /*  */
+    --tx-sm: 600 1rem/1.1 var(--ff); /* 16px */
+    --tx-ss: 600 .875rem/1.1 var(--ff); /*  */
+    --tx-sl: 600 .8rem/1.1 var(--ff); /*  */
 
     --incorrect: 700 .65rem/1 var(--ff);
     --bnt-cancel-sm: 500 .875rem/1 var(--ff); /* 8px */
@@ -116,6 +116,18 @@ ul {
     display: none;
 }
 
+.main-l.sideBar {
+    position: fixed;
+    height: 100%;
+    transform: translateX(0);
+    z-index: 1;
+    box-shadow: var(--box-shadow-list);
+}
+
+h2.contentsOn.sideBar-Large {
+    display: block;
+}
+
 .manterAss {
     background-image: var(--linear-bg-cl);
     padding: .875rem 1.6rem;
@@ -135,6 +147,7 @@ ul {
 @media (width < 60em) {
     .manterAss {
         font: var(--bnt-cancel-m);
+        padding: .8rem;
     }
 }
 
@@ -159,6 +172,7 @@ ul {
 @media (width < 60em) {
     .continueBnt {
         font: var(--bnt-cancel-m);
+        padding: .8rem;
     }
 }
 
@@ -166,10 +180,8 @@ ul {
 .divBnt {
   margin: 1rem auto;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
+  gap: 1rem;
   justify-content: space-between;
-  padding-inline: 1.4rem;
 }
 
 .divBntBenefits{

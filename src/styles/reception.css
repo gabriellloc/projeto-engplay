@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    padding: 1.5rem;
+    padding: 2.56rem 2rem;
 }
 
 .receptionDiv img[src*="icons/logo"] {
@@ -28,12 +28,12 @@
 
 .receptionDiv img[src*="icons/coracao.svg"] {
     width: 9rem;
-    margin: 1rem auto;
+    margin: auto;
 }
 
 @media (width < 70em) {
 	.receptionDiv img[src*="icons/coracao.svg"] {
-        width: 6rem;
+        width: 6.25rem;
     }
 }
 
@@ -46,7 +46,7 @@
 
 @media (width < 80em) {
 	.receptionDiv .byeTitle {
-        font: var(--title-sl);
+        font: var(--title-ls);
     }
 }
 
@@ -55,29 +55,23 @@
     margin: auto;
     color: var(--cl-black);
     font: var(--tx-sm);
-    max-width: 33rem;
 }
 
 @media (width < 80em) {
     .receptionDiv .byeText{
-        max-width: 40rem;
         font: var(--tx-ss);
     }
 }
 
 .receptionDiv div {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;  
+    justify-content: space-between;  
     margin: auto;
     width: 100%;
+    gap: 1rem;
 }
 
 @media (width < 80em) {
-    .receptionDiv div {
-        gap: 1.3rem;
-    }
-
     .receptionDiv div .continueBnt{
         width: fit-content;
     }

@@ -1,10 +1,13 @@
 export function privilege(){
+  // Removendo o confirmDiv da tela
   const confirmDiv = document.querySelector(".confirmDiv")
   confirmDiv.remove()
 
+  // Criando um elemento div
   const confirmModal = document.querySelector(".confirmModal")
   const privilegeDiv = document.createElement("div")
   privilegeDiv.classList.add("privilegeDiv")
+  // Conteúdo da div
   privilegeDiv.innerHTML = `
     <img src="assets/icons/logo (ENGPLAY).svg" alt="Logo" class="logo">
     <h1 class="byeTitle">Foi um privilégio ter você com a gente</h1>
@@ -13,10 +16,12 @@ export function privilege(){
   `
   confirmModal.append(privilegeDiv)
 
+  // Botão de fechar o modal
   const exitPrivilege = document.querySelector("#exitPrivilege")
   exitPrivilege.addEventListener("click", () => {
     confirmModal.close()
 
+    // Dando o reset na página com as modificações necessárias
     const mainContent = document.querySelector("#mainContent")
     mainContent.innerHTML = `
       <div class="charge">
@@ -36,7 +41,7 @@ export function privilege(){
           </section>
       </div>
     `
-
+    // Colocando o botão para dar reload na página
     const act = document.querySelector(".act")
     act.addEventListener("click", ()=> window.location.reload())
   })

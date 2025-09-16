@@ -5,7 +5,7 @@ table {
 }
 
 td {
-  padding: .6rem .5rem;
+  padding: .5rem;
 }
 
 .border-left {
@@ -51,6 +51,10 @@ td {
 
 @media (width <= 80em) {
   .divImgs {
+    width: 100%;
+  }
+
+  table p {
     display: none;
   }
 }
@@ -79,8 +83,8 @@ td {
     font: var(--tx-ss);
   }
 
-  .benefitsDiv td p {
-    font: var(--bnt-cancel-ss);
+  td {
+    padding: .3rem;
   }
 }
 

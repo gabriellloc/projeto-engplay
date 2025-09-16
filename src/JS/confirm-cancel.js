@@ -74,20 +74,27 @@ export function confirmCancel(){
   let realPassword = yourPassword
   password.value = formatPassword
 
+  // Recebendo as modificações no input da senha
   password.addEventListener("input", (event)=> {
+    // Obtendo a posição do cursor de texto
     const pos = event.target.selectionStart - 1;
+    // Pegando o último digito digitado
     let last = password.value.slice(-1)
+    // Condição que verifique se o usuário está digitando algo
     if(password.value.length == realPassword.length + 1){
       realPassword = realPassword.slice(0, pos) + last + realPassword.slice(pos)
     } else {
       realPassword = realPassword.slice(0, pos+1) + realPassword.slice(pos+1 +(realPassword.length - password.value.length))
     }
+    // Colocando a formatação de "*"
     formatPassword = password.value
     formatPassword = password.value.replace(/./g, "*")
     password.value = formatPassword
+    // Deixando o cursor de texto no último local digitado 
     password.setSelectionRange(pos + 1, pos + 1);
   })
 
+  // Deixando o botão de mostrar a senha funcional
   const showPassword = document.querySelector(".passwordBtn")
   showPassword.addEventListener("click", () => {
     if(password.value == formatPassword) {
@@ -97,9 +104,11 @@ export function confirmCancel(){
     }
   })
 
+  // Obtendo o local da senha e do e-mail
   const localEmail = document.querySelector("#localEmail")
   const localPassword = document.querySelector("#localPassword")
 
+  // Criando elementos de e-mail e/ou senha incorreta
   const emailIncorrect = document.createElement("div")
   emailIncorrect.textContent = "E-mail incorreto"
   emailIncorrect.classList.add("incorrect")
@@ -108,6 +117,7 @@ export function confirmCancel(){
   passwordIncorrect.textContent = "Senha incorreta"
   passwordIncorrect.classList.add("incorrect")
 
+  // Criando a condição que verifica se a senha/e-mail estão corretos
   const btnPrivilege = document.querySelector("#btnPrivilege")
   btnPrivilege.addEventListener("click", () => {
     if (email.value != yourEmail){
@@ -124,6 +134,7 @@ export function confirmCancel(){
       passwordIncorrect.remove()
     }
 
+    // Executa a próxima etapa
     privilege()
   })
 }

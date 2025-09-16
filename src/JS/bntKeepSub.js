@@ -5,19 +5,20 @@
 */
 
 import { reception } from "./reception"
+import {btnMenuFun} from "./main-l.js"
 
 // Função de manter assinatura.
 export function keepSubs(){
 	// Obtendo todos os botões de manter a assinatura.
 	const keepSub = document.querySelectorAll(".keepSub")
 
-	// Retorna um Array, assim sendo necessário percorrer esse array e adicionar um evento em cada item.
-  keepSub.forEach((bnt => {
+    // Retorna um Array, assim sendo necessário percorrer esse array e adicionar um evento em cada item.
+    keepSub.forEach((bnt => {
 		// Adicionando o evento
     bnt.addEventListener("click", () => {
-			// Rescrevendo o body(Uma das soluções encontradas)
-      const body = document.querySelector("body")
-      body.innerHTML = `<div class="nav" id="nav">
+        // Rescrevendo o body(Uma das soluções encontradas)
+        const body = document.querySelector("body")
+        body.innerHTML = `<div class="nav" id="nav">
         <section>
             <img src="assets/icons/Menu.svg" alt="Botão de menu" id="bntMenu">
             <img src="assets/icons/logo (ENGPLAY).svg" alt="Logo da Engplay">
@@ -107,18 +108,47 @@ export function keepSubs(){
                 </section>
             </div>
         </section>
-      </main>`
+        </main>`
 
-			// Adicionando o botão de cancelar
-      const btnCancel = document.querySelector("#cancel")
-      btnCancel.addEventListener("click", cancel)
-      
-      function cancel(){
+        // Criando o modal de agradecimento por ter ficado
+        const niceDecision = document.createElement("dialog")
+        niceDecision.classList.add("niceDecision")
+        const niceDecisionDiv = document.createElement("div")
+        niceDecisionDiv.innerHTML = `
+            <img src="assets/icons/logo (ENGPLAY).svg" alt="Logo" class="logo">
+            <h1 class="byeTitle">Ficamos muito feliz com a sua decisão!!</h1>
+            <p class="byeText">Obrigado por seguir conosco! Sua confiança é muito importante para nós.</p>
+            <button class="closeBtn">Fechar</button>
+        `
+        niceDecision.appendChild(niceDecisionDiv)
+        body.appendChild(niceDecision)
         nav.classList.add("blur")
         content.classList.add("blur")
+
+        // Botão de fechar o modal
+        const closeBtn = document.querySelector(".closeBtn")
+        niceDecision.showModal()
+        closeBtn.addEventListener("click", ()=> {
+            niceDecision.close()
+        })
+        niceDecision.addEventListener("close", () => {
+            nav.classList.remove("blur")
+            content.classList.remove("blur")
+            niceDecision.remove()
+        })
+        // Adicionando o botão de cancelar
+        const btnCancel = document.querySelector("#cancel")
+        btnCancel.addEventListener("click", cancel)
       
-        reception()
-      }
+        function cancel(){
+            nav.classList.add("blur")
+            content.classList.add("blur")
+        
+            // Função para chamar o botão de cancelar assinatura
+            reception()
+        }
+        // Barra lateral
+        btnMenuFun()
     })
   }))
 }
