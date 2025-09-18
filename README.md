@@ -48,6 +48,7 @@
 - **webpack**: ^5.101.3
 - **webpack-cli**: ^6.0.1
 - **webpack-dev-server**: ^5.2.2
+- **Node.js**: v22.18.0
 
 ## 📁 Estrutura de Pastas
   ```bash
