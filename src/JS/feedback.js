@@ -147,13 +147,15 @@ export function feedback(){
       const divNeeds = document.createElement("div")
       divNeeds.classList.add("divTimeOut")
       divNeeds.innerHTML = `
-        <h3>Trilha recomendada baseada no seu histórico + 10% ou mais de desconto</h3>
-        <p class="imgsNeeds">
-          <img src="assets/imgs/ENGPLAY_CAPACURSO_REVIT_1-1 1.png" alt="">
-          <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO 1.png" alt="">
-          <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
-          <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
-        </p>
+        <h3>Trilha recomendada baseada no seu histórico</h3>
+        <div class="hide-overflow">
+          <p class="imgsNeeds">
+            <img src="assets/imgs/ENGPLAY_CAPACURSO_REVIT_1-1 1.png" alt="">
+            <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO 1.png" alt="">
+            <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
+            <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
+          </p>
+        </div>
         <div class="flex">
           <button class="acceptOffer keepSub" id="acceptOfferBnt">Aceitar</button>
           <button class="recuseOffer" id="recuseOfferBnt">Recusar</button>

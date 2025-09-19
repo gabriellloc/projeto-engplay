@@ -2,7 +2,7 @@
     transform: translate(-50%,-50%);
     top: 50%;
     left: 50%;
-    width: 55rem;
+    max-width: 55rem;
     border: none;
     border-radius: 1rem;
     box-shadow: var(--box-shadow);
@@ -16,7 +16,7 @@
 
 .divTimeOut {
     background: var(--bg-offers);
-    padding: 2rem;
+    padding: 1.5rem;
 }
 
 .divTimeOut h3 {
@@ -34,7 +34,7 @@
 }
 
 .divTimeOut p {
-    font: var(--bnt-cancel-m);
+    font: var(--bnt-cancel-s);
     background: var(--cl-menu);
     padding: 1rem;
     border-radius: 8px;
@@ -82,44 +82,14 @@
 }
 
 .divTimeOut .imgsNeeds {
+    overflow: auto;
     display: flex;
     gap: .5rem;
-    justify-content: space-evenly;
     padding-block: 1.4rem;
 }
 
 .divTimeOut img {
     border-radius: .5rem;
     margin: auto;
-    width: fit-content;
-}
-
-@media (width < 60em) {
-    .divTimeOut .imgsNeeds {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        padding: 1rem;
-        width: 80%;
-        margin: auto;
-    }
-
-    .divTimeOut .imgsNeeds img:last-child{
-        grid-column: 2;
-    }
-}
-
-@media (width < 57em) {
-    .divTimeOut .imgsNeeds {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 1rem;
-        width: 80%;
-        margin: auto;
-    }   
-}
-
-@media (width < 50em) {
-    .divTimeOut img{
-        width: 100%;
-    }
+    width: 70%;
 }
