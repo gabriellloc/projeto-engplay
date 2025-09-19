@@ -136,8 +136,93 @@ export function feedback(){
       return alert("Preencha os dados.")
     }
 
+
+    // Criando a parte de ofertas
+    const offers = document.createElement("dialog")
+    // Estilização
+    offers.classList.add("offers")
+    
     // Executa a próxima etapa
-    benefits()
+    if(inputValue.value == "needs"){
+      const divNeeds = document.createElement("div")
+      divNeeds.classList.add("divTimeOut")
+      divNeeds.innerHTML = `
+        <h3>Trilha recomendada baseada no seu histórico + 10% ou mais de desconto</h3>
+        <p class="imgsNeeds">
+          <img src="assets/imgs/ENGPLAY_CAPACURSO_REVIT_1-1 1.png" alt="">
+          <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO 1.png" alt="">
+          <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
+          <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
+        </p>
+        <div class="flex">
+          <button class="acceptOffer keepSub" id="acceptOfferBnt">Aceitar</button>
+          <button class="recuseOffer" id="recuseOfferBnt">Recusar</button>
+        </div>
+      `
+      offers.append(divNeeds)
+      document.body.append(offers)
+
+      const nav = document.querySelector("#nav")
+      const content = document.querySelector("#content")
+      nav.classList.add("blur")
+      content.classList.add("blur")
+
+      offers.showModal()
+
+      offers.addEventListener("close", ()=> {
+        nav.classList.remove("blur")
+        content.classList.remove("blur")
+        offers.remove()
+      })
+
+      const recuseOfferBnt = document.querySelector("#recuseOfferBnt")
+      recuseOfferBnt.addEventListener("click", () => {
+        offers.close()
+        benefits()
+      })
+
+      const acceptOfferBnt = document.querySelector("#acceptOfferBnt")
+      acceptOfferBnt.addEventListener("click", ()=>{
+        offers.close()
+      })
+
+      keepSubs()
+    } else if (inputValue.value == "financial"){
+      const divFinancial = document.createElement("div")
+      divFinancial.classList.add("divTimeOut")
+      divFinancial.innerHTML = `
+        <h3>Aprender não precisa pesar no bolso.</h3>
+        <p>Podemos oferecer 50% OFF por 2 meses para que você continue estudando enquanto se reorganiza.</p>
+        <div class="flex">
+          <button class="acceptOffer keepSub" id="acceptOfferBnt">Aceitar</button>
+          <button class="recuseOffer" id="recuseOfferBnt">Recusar</button>
+        </div>        
+      `
+      offers.append(divFinancial)
+      document.body.append(offers)
+      
+      const nav = document.querySelector("#nav")
+      const content = document.querySelector("#content")
+      nav.classList.add("blur")
+      content.classList.add("blur")
+      
+      offers.showModal()
+      
+      offers.addEventListener("close", () => {
+        nav.classList.remove("blur")
+        content.classList.remove("blur")
+        offers.remove()
+      })
+      keepSubs()
+
+      const recuseOfferBnt = document.querySelector("#recuseOfferBnt")
+      recuseOfferBnt.addEventListener("click", () => {
+        offers.close()
+        benefits()
+      })
+    } else {
+      benefits()
+    }
   })
 
   // Obtendo o botão de manter assinatura

@@ -29,6 +29,7 @@ export function confirmCancel(){
       <div class="position">
         <input type="text" id="password">
         <span class="passwordBtn"></span>
+        <img src="assets/icons/visibility-open.svg" alt="Botão de mostrar senha" class="visibility-open"/>
       </div>
     </div>
     <div class="btnConfirms">
@@ -95,12 +96,14 @@ export function confirmCancel(){
   })
 
   // Deixando o botão de mostrar a senha funcional
-  const showPassword = document.querySelector(".passwordBtn")
+  const showPassword = document.querySelector(".visibility-open")
   showPassword.addEventListener("click", () => {
     if(password.value == formatPassword) {
+      showPassword.setAttribute("src", "assets/icons/visibility-close.svg")
       password.value = realPassword
     } else {
       password.value = formatPassword
+      showPassword.setAttribute("src", "assets/icons/visibility-open.svg")
     }
   })
 

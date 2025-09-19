@@ -118,11 +118,10 @@
   position: relative;
 }
 
-.passwordBtn::before{
-  content: "👁️";
+.visibility-open{
   position: absolute;
   transform: translate(-150%, -50%);
   top: 50%;
   left: 100%;
-  cursor: default;
+  cursor: pointer;
 }
