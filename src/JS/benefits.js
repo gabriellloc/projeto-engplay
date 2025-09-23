@@ -7,6 +7,7 @@
 // Importação do botão de manter assinatura e da próxima etapa
 import { keepSubs } from "./bntKeepSub"
 import { finalization } from "./finalization"
+import { goBackForm } from "./goBack"
 
 export function benefits(){
   // Obtendo o elemento responsável pela animação da barra de progresso
@@ -30,7 +31,7 @@ export function benefits(){
   const textTwo = document.querySelector("#text-two")
   textTwo.classList.add("active-color")
   textTwo.classList.add("scale")
-
+  
   // Obtendo o form
   const form = document.querySelector("form")
   // Removendo o form da tela
@@ -105,6 +106,8 @@ export function benefits(){
 
   // Obtendo o botão de manter assinatura
   keepSubs()
+
+  goBackForm()
 
   // Obtendo o botão para a próxima etapa
   const BtnFinalization = document.querySelector("#btnFinalization")

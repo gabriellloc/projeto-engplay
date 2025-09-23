@@ -110,6 +110,15 @@ ul {
     font: var(--bnt-cancel-m-atention);
 }
 
+.scale-1-hover{
+    transition: all 250ms;
+    cursor: pointer;
+}
+
+.scale-1-hover:hover{
+    transform: scale(1.05);
+}
+
 .atentionAprove {
     font: var(--bnt-cancel-m-atention);
 }

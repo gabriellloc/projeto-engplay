@@ -7,7 +7,6 @@
 // Importação do botão de manter assinatura e da próxima etapa
 import { benefits } from "./benefits"
 import { keepSubs } from "./bntKeepSub"
-import { goBack } from "./goBack"
 
 export function feedback(){
   // Obtendo o local que vai ficar o conteúdo e deixando ele vazio
@@ -88,9 +87,6 @@ export function feedback(){
 
   // Colocando o localMain na página
   mainContent.append(localMain)
-
-  // Colocando o botão de voltar
-  goBack()
 
   // Colocando a estilização de destaque na primeira etapa
   const numOne = document.querySelector("#num-one")
