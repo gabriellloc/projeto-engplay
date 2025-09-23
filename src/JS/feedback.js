@@ -7,6 +7,7 @@
 // Importação do botão de manter assinatura e da próxima etapa
 import { benefits } from "./benefits"
 import { keepSubs } from "./bntKeepSub"
+import { goBack } from "./goBack"
 
 export function feedback(){
   // Obtendo o local que vai ficar o conteúdo e deixando ele vazio
@@ -21,7 +22,7 @@ export function feedback(){
   const progressBarHTML = document.createElement("div")
   progressBarHTML.innerHTML = `
     <section class="progress-bar">
-      <div class="bar-stage">
+      <div class="bar-stage" id="feedbackBtn">
         <div class="number-bar active-background" id="num-one">1</div>
         <label class="text-bar active-color" id="text-one">FEEDBACK</label>
       </div>
@@ -37,7 +38,6 @@ export function feedback(){
       </div>
     </section>
   `
-
   // Criando o elemento form para obter as informações do motivo do cancelamento.
   const feedbackForm = document.createElement("form")
   feedbackForm.innerHTML = `
@@ -88,6 +88,9 @@ export function feedback(){
 
   // Colocando o localMain na página
   mainContent.append(localMain)
+
+  // Colocando o botão de voltar
+  goBack()
 
   // Colocando a estilização de destaque na primeira etapa
   const numOne = document.querySelector("#num-one")
