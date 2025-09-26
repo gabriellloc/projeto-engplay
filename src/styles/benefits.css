@@ -44,14 +44,23 @@ td {
 .divImgs {
   display: flex;
   gap: 1rem;
-  width: 48rem;
   margin: .2rem auto;
-  overflow: hidden;
+  padding-right: 1rem;
+  animation: rolling 7s infinite linear;
+}
+
+.courseImgs{
+  display: flex;
+  overflow-x: hidden;
+}
+
+.courseImgs::-webkit-scrollbar{
+  display: none;
 }
 
 @media (width <= 80em) {
   .divImgs {
-    width: 100%;
+    flex: 0 0 1rem;
   }
 
   table p {
@@ -62,7 +71,6 @@ td {
 .benefitsDiv img {
   width: 8rem;
   border-radius: .5rem;
-  animation: rolling 13s linear infinite;
 }
 
 .benefitsDiv h2 {
@@ -90,6 +98,6 @@ td {
 
 @keyframes rolling {
   to {
-    transform: translateX(-54rem);
+    transform: translateX(-100%);
   }
 }

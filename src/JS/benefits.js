@@ -47,20 +47,24 @@ export function benefits(){
     <h1>Você está prestes a perder todos os seus benefícios</h1>
     <hr>
     <p>Cancelando sua inscrição hoje, você deixará de ter acesso a:</p>
-    <div class="divImgs">
-      <img src="assets/imgs/etp-2-leitura-e-interpretacao.png" alt="">
-      <img src="assets/imgs/etp-2-instalacoes-hidrossanitarias.png" alt="">
-      <img src="assets/imgs/etp-2-projeto-hidrossanitario.png" alt="">
-      <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
-      <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
-      <img src="assets/imgs/ENGPLAY_CAPACURSO_TCC-1.webp" alt="">
-    
-      <img src="assets/imgs/etp-2-leitura-e-interpretacao.png" alt="">
-      <img src="assets/imgs/etp-2-instalacoes-hidrossanitarias.png" alt="">
-      <img src="assets/imgs/etp-2-projeto-hidrossanitario.png" alt="">
-      <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
-      <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
-      <img src="assets/imgs/ENGPLAY_CAPACURSO_TCC-1.webp" alt="">
+    <div class=courseImgs>
+      <div class="divImgs">
+        <img src="assets/imgs/etp-2-leitura-e-interpretacao.png" alt="">
+        <img src="assets/imgs/etp-2-instalacoes-hidrossanitarias.png" alt="">
+        <img src="assets/imgs/etp-2-projeto-hidrossanitario.png" alt="">
+        <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
+        <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
+        <img src="assets/imgs/ENGPLAY_CAPACURSO_TCC-1.webp" alt="">
+      </div>
+
+      <div aria-hidden class="divImgs">
+        <img src="assets/imgs/etp-2-leitura-e-interpretacao.png" alt="">
+        <img src="assets/imgs/etp-2-instalacoes-hidrossanitarias.png" alt="">
+        <img src="assets/imgs/etp-2-projeto-hidrossanitario.png" alt="">
+        <img src="assets/imgs/ENGPLAY_CAPACURSO_COMBATEINCENDIO_DO_PROJETO_A_APROVACAO 2.png" alt="">
+        <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
+        <img src="assets/imgs/ENGPLAY_CAPACURSO_TCC-1.webp" alt="">
+      </div>
     </div>
 
     <table>
