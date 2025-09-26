@@ -88,8 +88,19 @@
     padding-block: 1.4rem;
 }
 
+/* .imgsNeeds::-webkit-scrollbar {
+    display: none;
+} */
+
 .divTimeOut img {
     border-radius: .5rem;
     margin: auto;
-    width: 70%;
+    width: 100%;
+}
+
+
+@media (width < 50em) {
+    .divTimeOut img {
+        width: 60%;
+    }
 }
