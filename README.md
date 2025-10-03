@@ -92,12 +92,12 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
 
 ## 🧑‍🤝‍🧑 Autores
 - **[Isadora Matos Bispo](https://github.com/misabm)** - **Líder**
-- **[Alan Oliveira Silva Júnior]()**
+- **[Alan Oliveira Silva Júnior](https://github.com/crawlingorc)**
 - **[Carlos Eduardo Bezerra Menezes]()**
 - **[Gabriel Oliveira Cardoso](https://github.com/gabriellloc)**
-- **[José Guilherme Oliveira Van Geem]()** 
-- **[José Santos do Nascimento Neto]()** 
-- **[Lucas Gabriel dos Santos Azevedo]()** 
-- **[Luiz Gustavo de Oliveira Tavares]()**
-- **[Paulo Henrique Santiago Santos]()** 
-- **[Thiago Antonio de Albuquerque Passos]()**
+- **[José Guilherme Oliveira Van Geem](https://github.com/Guizinrop)** 
+- **[José Santos do Nascimento Neto](https://github.com/jose200175)** 
+- **[Lucas Gabriel dos Santos Azevedo](https://github.com/LukkSaint)** 
+- **[Luiz Gustavo de Oliveira Tavares](https://github.com/LUIGUGA)**
+- **[Paulo Henrique Santiago Santos](https://github.com/Phz1nSantiago)** 
+- **[Thiago Antonio de Albuquerque Passos](https://github.com/thz062)**
