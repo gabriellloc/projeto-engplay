@@ -93,7 +93,7 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
 ## 🧑‍🤝‍🧑 Autores
 - **[Isadora Matos Bispo](https://github.com/misabm)** - **Líder**
 - **[Alan Oliveira Silva Júnior](https://github.com/crawlingorc)**
-- **[Carlos Eduardo Bezerra Menezes]()**
+- **[Carlos Eduardo Bezerra Menezes](https://github.com/carlosf001)**
 - **[Gabriel Oliveira Cardoso](https://github.com/gabriellloc)**
 - **[José Guilherme Oliveira Van Geem](https://github.com/Guizinrop)** 
 - **[José Santos do Nascimento Neto](https://github.com/jose200175)** 
