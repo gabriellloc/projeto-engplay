@@ -50,6 +50,7 @@
 
 .detailsList ul li {
   font: var(--bnt-cancel-s);
+  color: var(--cl-midBlack);
 }
 
 @media (width > 50em) {

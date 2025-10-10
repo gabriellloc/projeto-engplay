@@ -46,12 +46,15 @@ td {
   gap: 1rem;
   margin: .2rem auto;
   padding-right: 1rem;
-  animation: rolling 7s infinite linear;
+  animation: rolling 10s infinite linear;
 }
 
 .courseImgs{
   display: flex;
   overflow-x: hidden;
+  max-width: 58rem;
+  margin: auto;
+  /* margin-inline: 1rem; */
 }
 
 .courseImgs::-webkit-scrollbar{
@@ -69,7 +72,7 @@ td {
 }
 
 .benefitsDiv img {
-  width: 8rem;
+  width: 7.5rem;
   border-radius: .5rem;
 }
 

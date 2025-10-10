@@ -27,7 +27,7 @@
 }
 
 .receptionDiv img[src*="icons/coracao.svg"] {
-    width: 9rem;
+    width: 7rem;
     margin: auto;
 }
 
@@ -55,6 +55,7 @@
     margin: auto;
     color: var(--cl-black);
     font: var(--tx-sm);
+    padding-inline: 2rem;
 }
 
 @media (width < 80em) {

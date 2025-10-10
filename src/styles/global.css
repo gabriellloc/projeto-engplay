@@ -46,6 +46,7 @@ body {
     /* Colors */
     --cl-white: #fff;
     --cl-black: #000;
+    --cl-midBlack: #535353;
     --cl-desc: #8F8D8D;
     --cl-ul: #EDEDED;
     --cl-darkgreen: #367623;
@@ -155,7 +156,7 @@ h2.contentsOn.sideBar-Large {
 }
 
 .manterAss:hover {
-    transform: scale(1.07);
+    transform: scale(1.03);
     box-shadow: 0 0 .6rem var(--cl-lightblue);
 }
 
