@@ -155,7 +155,7 @@ export function feedback(){
             <img src="assets/imgs/ENGPLAY_CAPA-CRIANDO-PORTIFOLIOS.png" alt="">
           </p>
         </div>
-        <div class="flex">
+        <div class="divBnt">
           <button class="acceptOffer keepSub" id="acceptOfferBnt">Aceitar</button>
           <button class="recuseOffer" id="recuseOfferBnt">Recusar</button>
         </div>

@@ -52,9 +52,6 @@ td {
 .courseImgs{
   display: flex;
   overflow-x: hidden;
-  max-width: 58rem;
-  margin: auto;
-  /* margin-inline: 1rem; */
 }
 
 .courseImgs::-webkit-scrollbar{
