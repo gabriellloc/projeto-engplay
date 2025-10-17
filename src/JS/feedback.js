@@ -40,7 +40,7 @@ export function feedback(){
   // Criando o elemento form para obter as informações do motivo do cancelamento.
   const feedbackForm = document.createElement("form")
   feedbackForm.innerHTML = `
-    <h1>Podemos ouvir você rapidinho ?</h1>
+    <h1>Podemos conversar rapidinho sobre sua experiência?</h1>
     <hr>
     <p>Entender seu motivo nos ajuda a evoluir. É rápido, basta escolher uma opção abaixo.</p>
     <div>
