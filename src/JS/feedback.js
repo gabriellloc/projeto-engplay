@@ -142,7 +142,10 @@ export function feedback(){
     offers.classList.add("offers")
     
     // Executa a próxima etapa
-    if(inputValue.value == "needs"){
+		if(inputValue === null && textValue != ""){
+      benefits()
+		}
+    else if(inputValue.value == "needs"){
       const divNeeds = document.createElement("div")
       divNeeds.classList.add("divTimeOut")
       divNeeds.innerHTML = `
