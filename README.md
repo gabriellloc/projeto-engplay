@@ -74,6 +74,9 @@ Siga os passos abaixo para configurar o ambiente de desenvolvimento e executar o
     ```bash
     npm install
     ```
+
+    **OBS:**Para utilizar os comandos do npm, é necessário ter o Node.js instalado na máquina.
+
 3. **Edite o código na pasta <code>src/</code>**: <br>
     Após realizar as alterações. gere a versão final com:
     ```bash
